@@ -1,5 +1,7 @@
 import _ from "lodash";
 import Navbar from "./components/Home/navbar";
+import Advice from "./components/Home/advice";
+import About from "./components/Home/about";
 import "./css/main.css";
 
 // Font Awesome Installing;
@@ -21,7 +23,12 @@ document.body.append(tailwindcss);
 // Create container block
 const container = document.createElement("div");
 container.className = "w-full min-h-screen";
+// Add Navbar Page 
 container.append(Navbar());
+// Add Advice Page
+container.append(Advice());
+// Add Advice Page
+container.append(About());
 document.body.prepend(container);
 
 // Toggle Menu
