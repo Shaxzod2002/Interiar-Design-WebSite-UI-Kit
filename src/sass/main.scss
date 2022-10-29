@@ -16,3 +16,55 @@ h5 {
 h6 {
   font-size: 20px;
 }
+
+.bars-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    .nav-logo {
+      position: relative;
+      width: 40%;
+    }
+    .nav-menu {
+      position: absolute;
+      top: 80px;
+      transform: translateX(-120%);
+      width: 100%;
+      align-items: flex-end;
+      padding: 20px;
+      flex-direction: column;
+      background: #000;
+      gap: 20px;
+      color: #fff;
+      a {
+        width: 100%;
+        min-height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: blue;
+        &:hover {
+          background-color: #fff;
+          border: 1px solid blue;
+          color: blue;
+        }
+      }
+      &.active-menu {
+        top: 80px;
+        left: 0;
+        transform: translateY(0);
+      }
+    }
+    .nav-login {
+      width: 40%;
+    }
+    .bars-menu {
+      display: flex;
+    }
+  }
+}
