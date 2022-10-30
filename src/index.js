@@ -1,7 +1,8 @@
 import _ from "lodash";
-import Navbar from "./components/Home/navbar";
-import Advice from "./components/Home/advice";
-import About from "./components/Home/about";
+import homeNavbar from "./components/Home/navbar";
+import homeAdvice from "./components/Home/advice";
+import homeAbout from "./components/Home/about";
+import homeServices from "./components/Home/services";
 import "./css/main.css";
 
 // Font Awesome Installing;
@@ -23,12 +24,14 @@ document.body.append(tailwindcss);
 // Create container block
 const container = document.createElement("div");
 container.className = "w-full min-h-screen";
-// Add Navbar Page 
-container.append(Navbar());
-// Add Advice Page
-container.append(Advice());
-// Add Advice Page
-container.append(About());
+// Add Home Navbar Page 
+container.append(homeNavbar());
+// Add Home Advice Page
+container.append(homeAdvice());
+// Add Home About Page
+container.append(homeAbout());
+// Add Home Services Page
+container.append(homeServices());
 document.body.prepend(container);
 
 // Toggle Menu
@@ -38,6 +41,6 @@ const barsMenu = document.querySelector(".bars-menu"),
 barsMenu.addEventListener("click", () => {
   navMenu.classList.toggle("active-menu");
   barsIcon.className === "fas fa-bars bars-icon"
-    ? (barsIcon.className = "fas fa-moon bars-icon")
+    ? (barsIcon.className = "fas fa-times bars-icon")
     : (barsIcon.className = "fas fa-bars bars-icon");
 });

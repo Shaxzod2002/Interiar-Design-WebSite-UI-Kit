@@ -1,8 +1,8 @@
 import avatar from "../../images/home/about/user.png";
 
-export default function () {
+export default function About() {
   const about = document.createElement("div");
-  about.className = "about w-[90%] min-h-auto mx-auto mt-[100px]";
+  about.className = "home-about w-[90%] min-h-auto mx-auto mt-[100px]";
   about.innerHTML = `
         <div class="flex items-center gap-3 font-['Poppins'] font-medium text-[16px]">
             <h6>ABOUT</h6>

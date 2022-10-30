@@ -1,26 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-.bars-menu {
-  display: none;
+.home-navbar {
+  .nav-menu {
+    a {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background: #000;
+        transition: all 0.5s linear;
+      }
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
+  .bars-menu {
+    display: none;
+  }
 }
 
-.advice {
+.home-advice {
   .background {
     background: url(../images/home/advice/bg.png) no-repeat center;
     background-size: cover;
   }
 }
 
-.about {
+.home-about {
   .background {
     background: url(../images/home/about/background.png) no-repeat center;
     background-size: cover;
   }
 }
 
+.home-services {
+  position: relative;
+
+  .background {
+    background: url(../images/home/services/bg.png) no-repeat center;
+    background-size: cover;
+  }
+}
+
 // Navbar Responsive Design Media
 @media (max-width: 768px) {
-  .navbar {
+  .home-navbar {
     position: relative;
     align-items: center;
     justify-content: space-between;
@@ -63,11 +92,11 @@
       width: 40%;
     }
     .bars-menu {
-      display: flex;
+      display: flex !important;
     }
   }
 
-  .advice {
+  .home-advice {
     .heading {
       font-size: 30px !important;
     }
@@ -82,7 +111,7 @@
       }
     }
   }
-  .about {
+  .home-about {
     .heading {
       font-size: 20px !important;
     }
@@ -99,6 +128,30 @@
         padding: 0;
         margin: 40px 0;
       }
+    }
+  }
+
+  .home-services {
+    .heading {
+      font-size: 25px;
+    }
+    .paragraph {
+      font-size: 16px;
+    }
+    .element {
+      width: 100%;
+      gap: 20px;
+      padding: 20px 0;
+      ol {
+        li {
+          font-size: 20px !important;
+        }
+      }
+    }
+    .background {
+      width: 100%;
+      left: 0;
+      top: 80%;
     }
   }
 }

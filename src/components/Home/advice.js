@@ -2,7 +2,7 @@ import backgroundImage from '../../images/home/advice/bg.png'
 
 export default function Advice() {
     const advice = document.createElement("div");
-    advice.className = "advice reletive w-[90%] mx-auto min-h-auto flex flex-col";
+    advice.className = "home-advice reletive w-[90%] mx-auto min-h-auto flex flex-col";
   advice.innerHTML = `
         <div class="text w-full min-h-full relative py-4">
             <h1 class="heading text-[#333333] text-[72px] font-['Poppins'] font-bold">Design your <br /> interor with high <br /> quality.</h1>

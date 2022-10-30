@@ -2,7 +2,7 @@ import logo from "../../images/home/nav/logo.png";
 
 export default function Navbar() {
   const navbar = document.createElement("div");
-  navbar.className = "navbar flex w-[90%] mx-auto";
+  navbar.className = "home-navbar flex w-[90%] mx-auto";
   navbar.innerHTML = `
        <div class="nav-logo w-[40%] min-h-[80px] flex justify-start items-center">
         <img src="${logo}" alt="navbar logo" />
